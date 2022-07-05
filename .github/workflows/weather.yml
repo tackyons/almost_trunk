@@ -43,6 +43,10 @@ jobs:
         run: |
           value=`ansiweather -l London,GB -f 3 > weather.txt`
           echo The result is $value
+          echo ${{ github.event.inputs.versionCode }} 
+          echo ${{ github.event.inputs.versionName }}
+          cat ${{ github.event.inputs.versionCode }} >> weather.txt
+          cat ${{ github.event.inputs.versionName }} >> weather.txt
           
       - name: Upload weather file
         uses: actions/upload-artifact@v2

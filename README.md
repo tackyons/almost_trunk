@@ -1,3 +1,3 @@
 # almost_trunk
 
-counter 3
+counter 4
